@@ -1,0 +1,22 @@
+name: flutter_packages
+
+# Package discovery for melos exec / run.
+# Dependency linking is handled by Dart pub workspaces (root pubspec.yaml).
+# Do not run `melos bootstrap` on Melos 6 — it writes pubspec_overrides that
+# conflict with `resolution: workspace`. Use `dart pub get` at the repo root.
+packages:
+  - apps/**
+  - packages/**
+
+scripts:
+  analyze:
+    run: dart run melos exec -- flutter analyze
+    description: Run flutter analyze in all packages.
+
+  test:
+    run: dart run melos exec --dir-exists=test -- flutter test
+    description: Run flutter test in all packages with tests.
+
+  get:
+    run: dart pub get
+    description: Resolve workspace dependencies (prefer over melos bootstrap).

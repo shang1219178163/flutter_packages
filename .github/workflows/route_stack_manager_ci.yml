@@ -1,0 +1,49 @@
+name: route_stack_manager CI
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'packages/route_stack_manager/**'
+      - '.github/workflows/route_stack_manager_ci.yml'
+  pull_request:
+    branches: [main, master]
+    paths:
+      - 'packages/route_stack_manager/**'
+      - '.github/workflows/route_stack_manager_ci.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/route_stack_manager
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Ensure Flutter bin is first in PATH
+        run: echo "$HOME/flutter/bin" >> $GITHUB_PATH
+
+      - name: Verify Flutter & Dart
+        run: |
+          which flutter
+          which dart
+          flutter --version
+          dart --version
+
+      - name: Resolve workspace dependencies
+        working-directory: .
+        run: dart pub get
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Test
+        run: flutter test
