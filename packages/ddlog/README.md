@@ -5,7 +5,16 @@ Flutter 最简单好用的日志工具 / The simplest and most handy Flutter log
 Output format / 输出格式:
 
 ```text
-[DateTime.now()][Type][System][className.funcName Line:lineNumber]: ...
+[DateTime.now()][Type][System][Class.method file.dart:line]: ...
+```
+
+Flags / 开关:
+
+```dart
+DLog.enableLog = true;       // master switch / 总开关
+DLog.onlyInDebug = true;     // skip release when true / 为 true 时 release 不打印
+DLog.enableCallerInfo = true; // class/file/line / 是否解析调用点
+DLog.enableColor = false;    // ANSI colors / 颜色
 ```
 
 ## Example / 示例

@@ -54,19 +54,26 @@ class DLog {
   }
 
   static void center(List<String> list) {
-    String line(String text, {String fill = "", required int maxLength}) {
-      final fillCount = maxLength - text.length;
-      final left = List.filled(fillCount ~/ 2, fill);
-      final right = List.filled(fillCount - left.length, fill);
-      return left.join() + text + right.join();
+    if (list.isEmpty) {
+      return;
     }
 
-    final listNew = [...list];
-    listNew.sort((a, b) => b.length.compareTo(a.length));
-    final maxLength = listNew.first.length;
+    String line(String text, {String fill = " ", required int maxLength}) {
+      final fillCount = maxLength - text.length;
+      final left = fillCount ~/ 2;
+      final right = fillCount - left;
+      return '${fill * left}$text${fill * right}';
+    }
+
+    var maxLength = 0;
+    for (final e in list) {
+      if (e.length > maxLength) {
+        maxLength = e.length;
+      }
+    }
 
     for (final e in list) {
-      d(line(e, fill: ' ', maxLength: maxLength));
+      d(line(e, maxLength: maxLength));
     }
   }
 
@@ -74,20 +81,37 @@ class DLog {
   static (String className, String functionName, String fileName, int lineNumber) _getCallerInfo() {
     try {
       final frames = StackTrace.current.toString().split('\n');
-      // 第一帧是当前方法，第二帧是日志方法（d/i/w/e），第三帧是调用者
-      if (frames.length > 2) {
-        final frame = frames[3]; // 获取调用者的帧
-        // 匹配类名和方法名
-        final classMatch = RegExp(r'#\d+\s+([^.]+)\.(\w+)').firstMatch(frame);
-        final className = classMatch?.group(1) ?? 'Unknown';
-        final functionName = classMatch?.group(2) ?? 'unknown';
+      // #0 _getCallerInfo, #1 _printLog, #2 d/i/w/e, #3 调用方
+      if (frames.length > 3) {
+        final frame = frames[3];
 
-        // 匹配文件名和行号
-        final fileMatch = RegExp(r'\((.+?):(\d+)(?::\d+)?\)').firstMatch(frame);
-        final fileName = fileMatch?.group(1) ?? 'unknown';
+        // 类.方法：类名不允许含路径字符，避免顶层函数误吞 `.dart`
+        final classMatch =
+            RegExp(r'#\d+\s+([A-Za-z_][\w]*)\.([A-Za-z_][\w]*)').firstMatch(frame);
+        var className = classMatch?.group(1) ?? '';
+        var functionName = classMatch?.group(2) ?? '';
+
+        if (className.isEmpty) {
+          final topLevel = RegExp(r'#\d+\s+([A-Za-z_][\w]*)\s+\(').firstMatch(frame);
+          functionName = topLevel?.group(1) ?? 'unknown';
+        }
+
+        // package:/file: 路径中的 .dart:line
+        final fileMatch = RegExp(
+          r'(?:package:|dart:|file:///?|[A-Za-z]:\\|/)([^\s:)]+\.dart):(\d+)(?::\d+)?',
+        ).firstMatch(frame);
+        var fileName = fileMatch?.group(1) ?? '';
         final lineNumber = int.tryParse(fileMatch?.group(2) ?? '0') ?? 0;
+        if (fileName.isNotEmpty) {
+          fileName = fileName.replaceAll('\\', '/').split('/').last;
+        }
 
-        return (className, functionName, fileName, lineNumber);
+        return (
+          className.isEmpty ? 'Unknown' : className,
+          functionName.isEmpty ? 'unknown' : functionName,
+          fileName,
+          lineNumber,
+        );
       }
     } catch (e) {
       debugPrint('Error getting caller info: $e');
@@ -114,14 +138,24 @@ class DLog {
       return "";
     }
 
-    final (className, functionName, _, lineNumber) = _getCallerInfo();
+    final (className, functionName, fileName, lineNumber) = _getCallerInfo();
     final now = DateTime.now();
     final timeStr = now.toString();
     final platform = _getPlatform();
 
-    final logMessage = kIsWeb
-        ? '[$timeStr][$level][$platform]: $message'
-        : '[$timeStr][$level][$platform][$className.$functionName Line:$lineNumber]: $message';
+    final caller = StringBuffer();
+    if (className.isNotEmpty && className != 'Unknown') {
+      caller.write('$className.');
+    }
+    caller.write(functionName);
+    if (fileName.isNotEmpty) {
+      caller.write(' $fileName');
+    }
+    if (lineNumber > 0) {
+      caller.write(':$lineNumber');
+    }
+
+    final logMessage = '[$timeStr][$level][$platform][$caller]: $message';
 
     if (kIsWeb) {
       return _printLogWeb(level, logMessage, webColor);

@@ -1,6 +1,6 @@
 name: ddlog
 description: "flutter log info [DateTime fileName className line ...] (iOS && android && linux && macOS && windows && fuchsia)."
-version: 1.0.1
+version: 1.1.0
 homepage: https://github.com/shang1219178163
 repository: https://github.com/shang1219178163/flutter_ddlog/tree/main
 publish_to: none

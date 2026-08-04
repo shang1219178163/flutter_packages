@@ -1,9 +1,19 @@
+import 'package:ddlog/ddlog.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:ddlog/ddlog.dart';
-
 void main() {
-  test('input values', () {
-    DLog.d("obj");
+  setUp(() {
+    DLog.enableLog = true;
+    DLog.enableColor = false;
+  });
+
+  test('log output includes file name', () {
+    final out = DLog.d('hello');
+    expect(out, contains('hello'));
+    expect(out, contains('.dart:'));
+  });
+
+  test('center empty list does not throw', () {
+    expect(() => DLog.center([]), returnsNormally);
   });
 }

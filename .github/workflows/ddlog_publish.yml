@@ -1,23 +1,19 @@
-name: route_stack_manager CI
+name: Publish ddlog
 
+# Tag example: ddlog-v1.1.0
 on:
   push:
-    branches: [main, master]
-    paths:
-      - 'packages/route_stack_manager/**'
-      - '.github/workflows/route_stack_manager_ci.yml'
-  pull_request:
-    branches: [main, master]
-    paths:
-      - 'packages/route_stack_manager/**'
-      - '.github/workflows/route_stack_manager_ci.yml'
+    tags:
+      - 'ddlog-v*.*.*'
 
 jobs:
-  build:
+  publish:
+    permissions:
+      id-token: write
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: packages/route_stack_manager
+        working-directory: packages/ddlog
 
     steps:
       - uses: actions/checkout@v4
@@ -42,8 +38,11 @@ jobs:
         working-directory: .
         run: dart pub get
 
-      - name: Analyze
-        run: flutter analyze
-
-      - name: Test
-        run: flutter test
+      - name: Publish package to pub.dev
+        uses: k-paxian/dart-package-publisher@v1.5.1
+        with:
+          relativePath: packages/ddlog
+          credentialJson: ${{ secrets.CREDENTIAL_JSON }}
+          flutter: true
+          skipTests: true
+          dryRunOnly: false
