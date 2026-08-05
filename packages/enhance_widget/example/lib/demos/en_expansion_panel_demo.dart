@@ -1,7 +1,7 @@
 import 'package:enhance_widget/enhance_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/demo_enhancement_banner.dart';
+import '../widgets/n_description_card.dart';
 
 class EnExpansionPanelDemo extends StatefulWidget {
   const EnExpansionPanelDemo({super.key});
@@ -25,18 +25,18 @@ class _EnExpansionPanelDemoState extends State<EnExpansionPanelDemo> {
       appBar: AppBar(title: const Text('EnExpansionPanel')),
       body: ListView(
         children: [
-          const DemoEnhancementBanner(
+          const NDescriptionCard(
             comparedTo: 'ExpansionPanel / ExpansionTile',
             items: [
-              DemoEnhancementItem(
+              NDescriptionItem(
                 en: 'Hide or customize expand arrows (arrow / arrowExpanded)',
                 zh: '可隐藏或自定义展开箭头（arrow / arrowExpanded）',
               ),
-              DemoEnhancementItem(
+              NDescriptionItem(
                 en: 'Arrow position: leading / tailing / none',
                 zh: '箭头位置支持 leading / tailing / none',
               ),
-              DemoEnhancementItem(
+              NDescriptionItem(
                 en: 'EnExpansionTile supports custom header / childrenHeader / childrenFooter',
                 zh: 'EnExpansionTile 支持自定义 header / childrenHeader / childrenFooter',
               ),

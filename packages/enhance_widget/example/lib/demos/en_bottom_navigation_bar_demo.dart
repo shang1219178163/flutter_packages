@@ -1,7 +1,7 @@
 import 'package:enhance_widget/enhance_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/demo_enhancement_banner.dart';
+import '../widgets/n_description_card.dart';
 
 class EnBottomNavigationBarDemo extends StatefulWidget {
   const EnBottomNavigationBarDemo({super.key});
@@ -31,14 +31,14 @@ class _EnBottomNavigationBarDemoState extends State<EnBottomNavigationBarDemo> {
       appBar: AppBar(title: const Text('EnBottomNavigationBar')),
       body: Column(
         children: [
-          const DemoEnhancementBanner(
+          const NDescriptionCard(
             comparedTo: 'BottomNavigationBar',
             items: [
-              DemoEnhancementItem(
+              NDescriptionItem(
                 en: 'onDoubleTap: double-tap callback for each item',
                 zh: '新增 onDoubleTap：支持双击回调',
               ),
-              DemoEnhancementItem(
+              NDescriptionItem(
                 en: 'tileBuilder: customize each tile by selected state',
                 zh: '新增 tileBuilder：可按选中态自定义每个 item 的布局',
               ),

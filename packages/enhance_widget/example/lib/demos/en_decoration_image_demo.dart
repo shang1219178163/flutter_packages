@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:enhance_widget/enhance_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/demo_enhancement_banner.dart';
+import '../widgets/n_description_card.dart';
 
 class EnDecorationImageDemo extends StatelessWidget {
   const EnDecorationImageDemo({super.key});
@@ -22,14 +22,14 @@ class EnDecorationImageDemo extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const DemoEnhancementBanner(
+          const NDescriptionCard(
             comparedTo: 'DecorationImage',
             items: [
-              DemoEnhancementItem(
+              NDescriptionItem(
                 en: 'placeholder: show a fallback image while the target loads',
                 zh: '新增 placeholder：目标图加载完成前显示占位图',
               ),
-              DemoEnhancementItem(
+              NDescriptionItem(
                 en: 'destinationOffset: translate paint position after alignment',
                 zh: '新增 destinationOffset：在 alignment 基础上平移绘制位置',
               ),
@@ -49,6 +49,7 @@ class EnDecorationImageDemo extends StatelessWidget {
                   height: 180,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(8),
                     image: EnDecorationImage(
                       image: CachedNetworkImageProvider(
                         'https://picsum.photos/seed/enhance_widget/800/400',

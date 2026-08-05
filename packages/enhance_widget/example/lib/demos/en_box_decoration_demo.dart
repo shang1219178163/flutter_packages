@@ -1,7 +1,7 @@
 import 'package:enhance_widget/enhance_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/demo_enhancement_banner.dart';
+import '../widgets/n_description_card.dart';
 
 class EnBoxDecorationDemo extends StatelessWidget {
   const EnBoxDecorationDemo({super.key});
@@ -13,14 +13,14 @@ class EnBoxDecorationDemo extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.zero,
         children: [
-          const DemoEnhancementBanner(
+          const NDescriptionCard(
             comparedTo: 'BoxDecoration',
             items: [
-              DemoEnhancementItem(
+              NDescriptionItem(
                 en: 'innerBoxShadow: draw inner shadows',
                 zh: '新增 innerBoxShadow：支持内阴影绘制',
               ),
-              DemoEnhancementItem(
+              NDescriptionItem(
                 en: 'Can be combined with outer boxShadow',
                 zh: '可与外阴影 boxShadow 同时使用',
               ),

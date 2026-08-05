@@ -1,7 +1,7 @@
 import 'package:enhance_widget/enhance_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/demo_enhancement_banner.dart';
+import '../widgets/n_description_card.dart';
 
 class EnStepperDemo extends StatefulWidget {
   const EnStepperDemo({super.key});
@@ -45,31 +45,21 @@ class _EnStepperDemoState extends State<EnStepperDemo> {
             icon: const Icon(Icons.change_circle_outlined),
           ),
         ],
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(48),
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 12),
-            child: Text(
-              _type == StepperType.horizontal ? 'horizontal' : 'vertical',
-              style: const TextStyle(color: Colors.white70),
-            ),
-          ),
-        ),
       ),
       body: Column(
         children: [
-          const DemoEnhancementBanner(
+          const NDescriptionCard(
             comparedTo: 'Stepper',
             items: [
-              DemoEnhancementItem(
+              NDescriptionItem(
                 en: 'horizontalTitlePosition: place titles below step circles (bottom)',
                 zh: 'horizontalTitlePosition：标题可放在步骤圆点下方（bottom）',
               ),
-              DemoEnhancementItem(
+              NDescriptionItem(
                 en: 'horizontalLinePosition: place connector lines on top (top)',
                 zh: 'horizontalLinePosition：连接线可置于顶部（top）',
               ),
-              DemoEnhancementItem(
+              NDescriptionItem(
                 en: 'Custom step icons via icon / stepIconBuilder',
                 zh: '支持自定义 step 图标（icon / stepIconBuilder）',
               ),

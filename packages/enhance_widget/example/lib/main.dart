@@ -11,10 +11,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = ColorScheme.fromSeed(
+      seedColor: Colors.green,
+      brightness: Brightness.light,
+      surface: Colors.white,
+    );
+
     return MaterialApp.router(
       title: 'enhance_widget example',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: colorScheme,
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: AppBarTheme(
+          backgroundColor: colorScheme.primary,
+          foregroundColor: colorScheme.onPrimary,
+          elevation: 0,
+          centerTitle: false,
+        ),
         useMaterial3: true,
       ),
       routerConfig: appRouter,
