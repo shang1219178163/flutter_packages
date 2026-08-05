@@ -1,6 +1,8 @@
 import 'package:enhance_widget/enhance_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/demo_enhancement_banner.dart';
+
 class EnStepperDemo extends StatefulWidget {
   const EnStepperDemo({super.key});
 
@@ -54,40 +56,63 @@ class _EnStepperDemoState extends State<EnStepperDemo> {
           ),
         ),
       ),
-      body: EnStepper(
-        type: _type,
-        horizontalTitlePosition: HorizontalTitlePosition.bottom,
-        horizontalLinePosition: HorizontalLinePosition.top,
-        currentStep: _index,
-        physics: const ClampingScrollPhysics(),
-        steps: [
-          for (var i = 0; i < _items.length; i++)
-            EnStep(
-              state: _items[i].$2,
-              isActive: _index == i,
-              title: Text('step $i'),
-              subtitle: Text(_items[i].$2.name),
-              content: Text('Content for Step $i'),
-            ),
-        ],
-        onStepCancel: () => _go(-1),
-        onStepContinue: () => _go(1),
-        onStepTapped: (index) => setState(() => _index = index),
-        controlsBuilder: (context, details) {
-          return Row(
-            children: [
-              ElevatedButton(
-                onPressed: details.onStepContinue,
-                child: const Text('Next'),
+      body: Column(
+        children: [
+          const DemoEnhancementBanner(
+            comparedTo: 'Stepper',
+            items: [
+              DemoEnhancementItem(
+                en: 'horizontalTitlePosition: place titles below step circles (bottom)',
+                zh: 'horizontalTitlePosition：标题可放在步骤圆点下方（bottom）',
               ),
-              const SizedBox(width: 8),
-              TextButton(
-                onPressed: details.onStepCancel,
-                child: const Text('Back'),
+              DemoEnhancementItem(
+                en: 'horizontalLinePosition: place connector lines on top (top)',
+                zh: 'horizontalLinePosition：连接线可置于顶部（top）',
+              ),
+              DemoEnhancementItem(
+                en: 'Custom step icons via icon / stepIconBuilder',
+                zh: '支持自定义 step 图标（icon / stepIconBuilder）',
               ),
             ],
-          );
-        },
+          ),
+          Expanded(
+            child: EnStepper(
+              type: _type,
+              horizontalTitlePosition: HorizontalTitlePosition.bottom,
+              horizontalLinePosition: HorizontalLinePosition.top,
+              currentStep: _index,
+              physics: const ClampingScrollPhysics(),
+              steps: [
+                for (var i = 0; i < _items.length; i++)
+                  EnStep(
+                    state: _items[i].$2,
+                    isActive: _index == i,
+                    title: Text('step $i'),
+                    subtitle: Text(_items[i].$2.name),
+                    content: Text('Content for Step $i'),
+                  ),
+              ],
+              onStepCancel: () => _go(-1),
+              onStepContinue: () => _go(1),
+              onStepTapped: (index) => setState(() => _index = index),
+              controlsBuilder: (context, details) {
+                return Row(
+                  children: [
+                    ElevatedButton(
+                      onPressed: details.onStepContinue,
+                      child: const Text('Next'),
+                    ),
+                    const SizedBox(width: 8),
+                    TextButton(
+                      onPressed: details.onStepCancel,
+                      child: const Text('Back'),
+                    ),
+                  ],
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }

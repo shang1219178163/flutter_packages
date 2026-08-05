@@ -1,6 +1,8 @@
 import 'package:enhance_widget/enhance_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/demo_enhancement_banner.dart';
+
 class EnBottomNavigationBarDemo extends StatefulWidget {
   const EnBottomNavigationBarDemo({super.key});
 
@@ -27,23 +29,42 @@ class _EnBottomNavigationBarDemoState extends State<EnBottomNavigationBarDemo> {
 
     return Scaffold(
       appBar: AppBar(title: const Text('EnBottomNavigationBar')),
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              'Selected: ${_tabs[_index].$1}',
-              style: Theme.of(context).textTheme.headlineSmall,
+      body: Column(
+        children: [
+          const DemoEnhancementBanner(
+            comparedTo: 'BottomNavigationBar',
+            items: [
+              DemoEnhancementItem(
+                en: 'onDoubleTap: double-tap callback for each item',
+                zh: '新增 onDoubleTap：支持双击回调',
+              ),
+              DemoEnhancementItem(
+                en: 'tileBuilder: customize each tile by selected state',
+                zh: '新增 tileBuilder：可按选中态自定义每个 item 的布局',
+              ),
+            ],
+          ),
+          Expanded(
+            child: Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'Selected: ${_tabs[_index].$1}',
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+                  const SizedBox(height: 12),
+                  Text(_lastAction),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'Home uses tileBuilder when selected.\nDouble-tap any item to see onDoubleTap.',
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
             ),
-            const SizedBox(height: 12),
-            Text(_lastAction),
-            const SizedBox(height: 8),
-            const Text(
-              'Home uses tileBuilder when selected.\nDouble-tap any item to see onDoubleTap.',
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
       bottomNavigationBar: EnBottomNavigationBar(
         type: BottomNavigationBarType.fixed,

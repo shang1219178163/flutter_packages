@@ -9,4 +9,12 @@ void main() {
     expect(find.text('EnStepper'), findsOneWidget);
     expect(find.text('EnBottomNavigationBar'), findsOneWidget);
   });
+
+  testWidgets('go_router opens expansion demo', (tester) async {
+    await tester.pumpWidget(const MyApp());
+    await tester.tap(find.text('EnExpansionPanel'));
+    await tester.pumpAndSettle();
+    expect(find.text('EnExpansionPanel'), findsWidgets);
+    expect(find.text('EnExpansionPanelList'), findsOneWidget);
+  });
 }

@@ -1,6 +1,8 @@
 import 'package:enhance_widget/enhance_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/demo_enhancement_banner.dart';
+
 class EnExpansionPanelDemo extends StatefulWidget {
   const EnExpansionPanelDemo({super.key});
 
@@ -9,7 +11,7 @@ class EnExpansionPanelDemo extends StatefulWidget {
 }
 
 class _EnExpansionPanelDemoState extends State<EnExpansionPanelDemo> {
-  late final List<_PanelItem> _data = List.generate(8, (index) {
+  late final List<_PanelItem> _data = List.generate(3, (index) {
     return _PanelItem(
       index: index,
       headerValue: 'Panel $index',
@@ -23,6 +25,23 @@ class _EnExpansionPanelDemoState extends State<EnExpansionPanelDemo> {
       appBar: AppBar(title: const Text('EnExpansionPanel')),
       body: ListView(
         children: [
+          const DemoEnhancementBanner(
+            comparedTo: 'ExpansionPanel / ExpansionTile',
+            items: [
+              DemoEnhancementItem(
+                en: 'Hide or customize expand arrows (arrow / arrowExpanded)',
+                zh: '可隐藏或自定义展开箭头（arrow / arrowExpanded）',
+              ),
+              DemoEnhancementItem(
+                en: 'Arrow position: leading / tailing / none',
+                zh: '箭头位置支持 leading / tailing / none',
+              ),
+              DemoEnhancementItem(
+                en: 'EnExpansionTile supports custom header / childrenHeader / childrenFooter',
+                zh: 'EnExpansionTile 支持自定义 header / childrenHeader / childrenFooter',
+              ),
+            ],
+          ),
           Padding(
             padding: const EdgeInsets.all(12),
             child: Text(
@@ -42,7 +61,8 @@ class _EnExpansionPanelDemoState extends State<EnExpansionPanelDemo> {
                 canTapOnHeader: true,
                 arrowColor: Colors.blue,
                 arrowPosition: EnExpansionPanelArrowPosition.tailing,
-                arrow: const Icon(Icons.keyboard_arrow_right, color: Colors.blue),
+                arrow:
+                    const Icon(Icons.keyboard_arrow_right, color: Colors.blue),
                 arrowExpanded:
                     const Icon(Icons.keyboard_arrow_down, color: Colors.red),
                 headerBuilder: (context, isExpanded) {
@@ -98,5 +118,5 @@ class _PanelItem {
   final int index;
   final String headerValue;
   final List<String> items;
-  bool isExpanded;
+  bool isExpanded = false;
 }
