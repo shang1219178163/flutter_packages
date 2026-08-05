@@ -10,9 +10,18 @@ When embedding screenshots or demo images in Markdown (README, docs, changelogs)
 
 - Prefer `width="30%"` on `<img>` tags
 - Do **not** use fixed pixel widths like `width="220"`
+- At most **3 images per row** — put each row in its own `<p>...</p>`
+- Prefer **absolute** `raw.githubusercontent.com` URLs (so GitHub and pub.dev both render after push to `main`)
 
 Example:
 
 ```html
-<img src="..." width="30%" alt="...">
+<p>
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/<pkg>/screenshot/a.png" width="30%" alt="A">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/<pkg>/screenshot/b.png" width="30%" alt="B">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/<pkg>/screenshot/c.png" width="30%" alt="C">
+</p>
+<p>
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/<pkg>/screenshot/d.png" width="30%" alt="D">
+</p>
 ```

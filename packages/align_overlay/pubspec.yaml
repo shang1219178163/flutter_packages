@@ -1,6 +1,6 @@
 name: align_overlay
 description: "A Flutter pop-up view with direction from alignment type: popup, sheet, dialog, drawer, toast."
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/shang1219178163/flutter_packages/tree/main/packages/align_overlay
 repository: https://github.com/shang1219178163/flutter_packages/tree/main/packages/align_overlay
 
