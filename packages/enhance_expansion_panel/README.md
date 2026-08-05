@@ -1,5 +1,13 @@
 # enhance_expansion_panel
 
+> **⚠️ Deprecated / 已弃用**
+>
+> This package is no longer actively maintained. Please migrate to
+> [`enhance_widget`](https://pub.dev/packages/enhance_widget)
+> (`EnExpansionPanel` / `EnExpansionPanelList` / `EnExpansionTile` / `EnExpandListView`).
+>
+> 本包已停止积极维护，请改用 [`enhance_widget`](https://pub.dev/packages/enhance_widget)。
+
 <!-- 
 This README describes the package. If you publish this package to pub.dev,
 this README's contents appear on the landing page for your package.
@@ -39,7 +47,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  enhance_expansion_panel: ^2.0.0
+  enhance_expansion_panel: ^2.0.1
 ```
 ## Usage
 TODO: 
