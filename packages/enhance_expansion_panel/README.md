@@ -121,8 +121,8 @@ EnhanceExpansionPanelList(
 
 ## Screenshot
 
-![EnhanceExpansionPanelList](https://github.com/shang1219178163/enhance_expansion_panel/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202021-10-28%20at%2015.06.49.png?raw=true)
-
-![arrow positon](https://github.com/shang1219178163/enhance_expansion_panel/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202021-10-28%20at%2015.07.08.png?raw=true)
-
-![custom arrow](https://github.com/shang1219178163/enhance_expansion_panel/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202021-10-28%20at%2015.18.14.png?raw=true)
+<p>
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_expansion_panel/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202021-10-28%20at%2015.06.49.png" width="220">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_expansion_panel/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202021-10-28%20at%2015.07.08.png" width="220">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_expansion_panel/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202021-10-28%20at%2015.18.14.png" width="220">
+</p>
