@@ -6,6 +6,7 @@ on:
   push:
     tags:
       - 'enhance_stepper-v*.*.*'
+  workflow_dispatch:
 
 jobs:
   publish:

@@ -6,6 +6,7 @@ on:
   push:
     tags:
       - 'enhance_expansion_panel-v*.*.*'
+  workflow_dispatch:
 
 jobs:
   publish:
