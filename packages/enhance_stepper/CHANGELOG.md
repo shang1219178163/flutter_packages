@@ -1,3 +1,7 @@
+## 2.0.1
+
+* Mark package as deprecated in favor of `enhance_widget`.
+
 ## 2.0.0
 
 * **Breaking:** Restore package name from `en_stepper` back to `enhance_stepper`.

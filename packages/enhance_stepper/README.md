@@ -1,9 +1,17 @@
 # enhance_stepper
 
+> **⚠️ Deprecated / 已弃用**
+>
+> This package is no longer actively maintained. Please migrate to
+> [`enhance_widget`](https://pub.dev/packages/enhance_widget)
+> (`EnStepper` / `EnStep`).
+>
+> 本包已停止积极维护，请改用 [`enhance_widget`](https://pub.dev/packages/enhance_widget)。
+
 [![pub](https://img.shields.io/pub/v/enhance_stepper.svg)](https://pub.dev/packages/enhance_stepper)
 
 ```dart
-enhance_stepper: ^2.0.0
+enhance_stepper: ^2.0.1
 ```
 
 An easy to implement Extra features.
