@@ -18,6 +18,8 @@ Enhanced Flutter widgets under a unified `En*` API — drop-in upgrades over Mat
 <img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_widget/screenshot/en_expansion_panel.png" width="30%" alt="EnExpansionPanel">
 <img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_widget/screenshot/en_stepper.png" width="30%" alt="EnStepper">
 <img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_widget/screenshot/en_bottom_navigation_bar.png" width="30%" alt="EnBottomNavigationBar">
+</p>
+<p>
 <img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_widget/screenshot/en_box_decoration.png" width="30%" alt="EnBoxDecoration">
 <img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_widget/screenshot/en_decoration_image.png" width="30%" alt="EnDecorationImage">
 </p>

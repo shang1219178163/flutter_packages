@@ -1,3 +1,7 @@
+## 1.0.1
+
+* Update screenshots and example README (absolute image links).
+
 ## 1.0.0
 
 * Rename package from `n_slide_popup` to `align_overlay`.

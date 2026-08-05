@@ -5,7 +5,7 @@ A pop-up window that supports appearing in any direction, it is popup, sheet, di
 
 ```yaml
 dependencies:
-  align_overlay: ^1.0.0
+  align_overlay: ^1.0.1
 ```
 
 ## Usage
@@ -53,13 +53,31 @@ import 'package:align_overlay/align_overlay.dart';
 ```
 
 
-![](https://github.com/shang1219178163/flutter_packages/blob/main/packages/align_overlay/example/assets/images/image_merge_horizontal_20260805_102957.webp?raw=true)
+## Screenshots
 
-![](https://github.com/shang1219178163/flutter_packages/blob/main/packages/align_overlay/example/assets/images/image_merge_horizontal_20260805_103048.webp?raw=true)
-
-![](https://github.com/shang1219178163/flutter_packages/blob/main/packages/align_overlay/example/assets/images/image_merge_horizontal_20260805_103114.webp?raw=true)
-
-![](https://github.com/shang1219178163/flutter_packages/blob/main/packages/align_overlay/example/assets/images/image_merge_horizontal_20260805_104933.webp?raw=true)
+<p>
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/align_top_left.png" width="30%" alt="Alignment.topLeft">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/align_top_center.png" width="30%" alt="Alignment.topCenter">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/align_top_right.png" width="30%" alt="Alignment.topRight">
+</p>
+<p>
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/align_center_left.png" width="30%" alt="Alignment.centerLeft">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/align_center.png" width="30%" alt="Alignment.center">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/align_center_right.png" width="30%" alt="Alignment.centerRight">
+</p>
+<p>
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/align_bottom_left.png" width="30%" alt="Alignment.bottomLeft">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/align_bottom_center.png" width="30%" alt="Alignment.bottomCenter">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/align_bottom_right.png" width="30%" alt="Alignment.bottomRight">
+</p>
+<p>
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/dialog_sheet.png" width="30%" alt="AlignOverlayDialog.sheet">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/dialog_drawer.png" width="30%" alt="AlignOverlayDialog.drawer">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/dialog_toast.png" width="30%" alt="AlignOverlayDialog.toast">
+</p>
+<p>
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/align_overlay/example/screenshots/dialog_loading.png" width="30%" alt="AlignOverlayDialog.loading">
+</p>
 
 
 ## 2、AlignOverlayDialog
