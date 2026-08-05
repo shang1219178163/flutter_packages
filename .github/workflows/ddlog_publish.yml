@@ -1,5 +1,6 @@
 name: Publish ddlog
 
+# Package: https://pub.dev/packages/ddlog
 # Tag example: ddlog-v1.1.0
 on:
   push:
@@ -46,3 +47,13 @@ jobs:
           flutter: true
           skipTests: true
           dryRunOnly: false
+
+      - name: Package on pub.dev
+        if: always()
+        run: |
+          {
+            echo "## Publish ddlog"
+            echo ""
+            echo "- Package: [https://pub.dev/packages/ddlog](https://pub.dev/packages/ddlog)"
+            echo "- Versions: [https://pub.dev/packages/ddlog/versions](https://pub.dev/packages/ddlog/versions)"
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,3 +1,7 @@
+## v0.8.0
+
+* Publish from flutter_packages monorepo.
+
 ## v0.7.0
 
 * TODO: 修复警告

@@ -1,3 +1,7 @@
+## 0.3.0
+
+* Publish from flutter_packages monorepo.
+
 ## 0.2.0
 
 * TODO: Refactor code in a better way.

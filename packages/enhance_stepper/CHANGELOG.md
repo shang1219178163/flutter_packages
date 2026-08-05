@@ -1,3 +1,7 @@
+## 1.1.0
+
+* Publish from flutter_packages monorepo.
+
 ## 1.0.2
 
 * TODO: example project change.
