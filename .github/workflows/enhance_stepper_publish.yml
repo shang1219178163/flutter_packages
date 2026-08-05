@@ -41,13 +41,15 @@ jobs:
         run: dart pub get
 
       - name: Publish package to pub.dev
-        uses: k-paxian/dart-package-publisher@v1.5.1
-        with:
-          relativePath: packages/enhance_stepper
-          credentialJson: ${{ secrets.CREDENTIAL_JSON }}
-          flutter: true
-          skipTests: true
-          dryRunOnly: false
+        env:
+          PUB_CREDENTIALS: ${{ secrets.CREDENTIAL_JSON }}
+        run: |
+          mkdir -p "$HOME/.config/dart"
+          printenv PUB_CREDENTIALS > "$HOME/.config/dart/pub-credentials.json"
+          VERSION=$(awk '/^version:/ {print $2; exit}' pubspec.yaml)
+          echo "Publishing enhance_stepper $VERSION"
+          flutter pub publish --dry-run
+          flutter pub publish --force
 
       - name: Package on pub.dev
         if: always()
