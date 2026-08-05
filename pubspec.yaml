@@ -1,0 +1,31 @@
+name: flutter_packages
+description: Flutter packages monorepo workspace.
+publish_to: none
+
+environment:
+  sdk: ^3.6.0
+
+workspace:
+  - apps/example
+  - packages/ddlog
+  - packages/ddlog/example
+  - packages/enhance_expansion_panel
+  - packages/enhance_expansion_panel/example
+  - packages/enhance_stepper
+  - packages/enhance_stepper/example
+  - packages/n_slide_popup
+  - packages/n_slide_popup/example
+  - packages/route_stack_manager
+  - packages/route_stack_manager/example
+  - packages/tap_track
+  - packages/tap_track/example
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  melos: ^6.3.2
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,23 @@
+name: route_stack_manager
+description: "Flutter route stack listener: current routes, previous route, and whether the current route is a popup."
+version: 1.2.1
+homepage: https://github.com/shang1219178163/route_stack_manager
+publish_to: none
+
+environment:
+  sdk: ^3.6.0
+  flutter: ">=3.10.6"
+
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

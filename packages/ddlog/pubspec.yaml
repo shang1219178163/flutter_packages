@@ -1,0 +1,22 @@
+name: ddlog
+description: "flutter log info [DateTime fileName className line ...] (iOS && android && linux && macOS && windows && fuchsia)."
+version: 1.1.0
+homepage: https://github.com/shang1219178163
+repository: https://github.com/shang1219178163/flutter_ddlog/tree/main
+
+environment:
+  sdk: ^3.6.0
+
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

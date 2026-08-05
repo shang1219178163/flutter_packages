@@ -1,0 +1,24 @@
+name: route_stack_manager_example
+description: Example app for the route_stack_manager package.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  ddlog: any
+  route_stack_manager: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

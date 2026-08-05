@@ -1,0 +1,23 @@
+name: enhance_expansion_panel
+description: "Based on flutter native ExpansionPanel upgrade: hide default arrow, custom arrows, leading/trailing layout."
+version: 0.7.0
+homepage: https://github.com/shang1219178163
+repository: https://github.com/shang1219178163/enhance_expansion_panel/tree/main
+publish_to: none
+
+environment:
+  sdk: ^3.6.0
+
+resolution: workspace
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

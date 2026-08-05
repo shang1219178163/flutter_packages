@@ -1,0 +1,49 @@
+name: Publish n_slide_popup
+
+# Tag example: n_slide_popup-v0.1.0
+on:
+  push:
+    tags:
+      - 'n_slide_popup-v*.*.*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/n_slide_popup
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Ensure Flutter bin is first in PATH
+        run: echo "$HOME/flutter/bin" >> $GITHUB_PATH
+
+      - name: Verify Flutter & Dart
+        run: |
+          which flutter
+          which dart
+          flutter --version
+          dart --version
+
+      - name: Resolve workspace dependencies
+        working-directory: .
+        run: dart pub get
+
+      - name: Dry run publish
+        run: flutter pub publish --dry-run
+
+      - name: Publish package to pub.dev
+        uses: k-paxian/dart-package-publisher@v1.5.1
+        with:
+          relativePath: packages/n_slide_popup
+          credentialJson: ${{ secrets.CREDENTIAL_JSON }}
+          flutter: true
+          skipTests: true
+          dryRunOnly: false

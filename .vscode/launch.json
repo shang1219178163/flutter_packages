@@ -1,0 +1,169 @@
+{
+  // 使用 IntelliSense 了解相关属性。
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "flutter_packages",
+      "cwd": "apps/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart"
+    },
+    {
+      "name": "flutter_packages (profile mode)",
+      "cwd": "apps/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "flutter_packages (release mode)",
+      "cwd": "apps/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "ddlog",
+      "cwd": "packages/ddlog/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart"
+    },
+    {
+      "name": "ddlog (profile mode)",
+      "cwd": "packages/ddlog/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "ddlog (release mode)",
+      "cwd": "packages/ddlog/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "enhance_expansion_panel",
+      "cwd": "packages/enhance_expansion_panel/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart"
+    },
+    {
+      "name": "enhance_expansion_panel (profile mode)",
+      "cwd": "packages/enhance_expansion_panel/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "enhance_expansion_panel (release mode)",
+      "cwd": "packages/enhance_expansion_panel/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "enhance_stepper",
+      "cwd": "packages/enhance_stepper/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart"
+    },
+    {
+      "name": "enhance_stepper (profile mode)",
+      "cwd": "packages/enhance_stepper/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "enhance_stepper (release mode)",
+      "cwd": "packages/enhance_stepper/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "n_slide_popup",
+      "cwd": "packages/n_slide_popup/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart"
+    },
+    {
+      "name": "n_slide_popup (profile mode)",
+      "cwd": "packages/n_slide_popup/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "n_slide_popup (release mode)",
+      "cwd": "packages/n_slide_popup/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "route_stack_manager",
+      "cwd": "packages/route_stack_manager/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart"
+    },
+    {
+      "name": "route_stack_manager (profile mode)",
+      "cwd": "packages/route_stack_manager/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "route_stack_manager (release mode)",
+      "cwd": "packages/route_stack_manager/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "tap_track",
+      "cwd": "packages/tap_track/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart"
+    },
+    {
+      "name": "tap_track (profile mode)",
+      "cwd": "packages/tap_track/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "tap_track (release mode)",
+      "cwd": "packages/tap_track/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "release"
+    }
+  ]
+}
