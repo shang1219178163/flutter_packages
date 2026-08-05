@@ -7,10 +7,10 @@ flutter_packages/
 ├── apps/
 │   └── example/                          # Demo app
 ├── packages/
+│   ├── align_overlay/                    # Alignment-driven overlay / sheet / drawer
 │   ├── ddlog/                            # Logging helpers
 │   ├── enhance_expansion_panel/          # Enhanced ExpansionPanel
 │   ├── enhance_stepper/                  # Enhanced Stepper
-│   ├── n_slide_popup/                    # Slide popup / sheet / drawer
 │   ├── route_stack_manager/              # Route stack listener
 │   └── tap_track/                        # Tap-event global tracking
 │       └── example/                      # Each package keeps its own example/
@@ -48,9 +48,9 @@ cd apps/example && flutter test
 
 # 运行 example 应用
 cd apps/example && flutter run
+cd packages/align_overlay/example && flutter run
 cd packages/ddlog/example && flutter run
 cd packages/tap_track/example && flutter run
-cd packages/n_slide_popup/example && flutter run
 cd packages/route_stack_manager/example && flutter run
 cd packages/enhance_expansion_panel/example && flutter run
 cd packages/enhance_stepper/example && flutter run
@@ -58,6 +58,37 @@ cd packages/enhance_stepper/example && flutter run
 # 列出 workspace 包
 dart run melos list
 ```
+
+## 发布到 pub.dev
+
+推送匹配规则的 git tag 会触发 `.github/workflows/*_publish.yml`，自动发布对应包。
+
+发布前请确认：
+
+1. `packages/<name>/pubspec.yaml` 的 `version` 已更新
+2. `CHANGELOG.md` 已包含该版本说明
+3. 已去掉 `publish_to: none`（如有）
+
+```bash
+# 格式：<package>-v<semver>
+git tag align_overlay-v1.0.0
+git tag ddlog-v1.1.0
+git tag route_stack_manager-v1.2.1
+git tag tap_track-v0.2.0
+
+# 推送单个 tag 触发对应 workflow
+git push origin align_overlay-v1.0.0
+
+# 或一次推送多个 tag
+git push origin --tags
+```
+
+| Package | Tag 示例 | Workflow |
+|---------|----------|----------|
+| `align_overlay` | `align_overlay-v1.0.0` | `align_overlay_publish.yml` |
+| `ddlog` | `ddlog-v1.1.0` | `ddlog_publish.yml` |
+| `route_stack_manager` | `route_stack_manager-v1.2.1` | `route_stack_manager_publish.yml` |
+| `tap_track` | `tap_track-v0.2.0` | `tap_track_publish.yml` |
 
 ## 新增 package
 

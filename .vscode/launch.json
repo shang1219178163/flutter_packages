@@ -97,23 +97,23 @@
       "flutterMode": "release"
     },
     {
-      "name": "n_slide_popup",
-      "cwd": "packages/n_slide_popup/example",
+      "name": "align_overlay",
+      "cwd": "packages/align_overlay/example",
       "request": "launch",
       "type": "dart",
       "program": "lib/main.dart"
     },
     {
-      "name": "n_slide_popup (profile mode)",
-      "cwd": "packages/n_slide_popup/example",
+      "name": "align_overlay (profile mode)",
+      "cwd": "packages/align_overlay/example",
       "request": "launch",
       "type": "dart",
       "program": "lib/main.dart",
       "flutterMode": "profile"
     },
     {
-      "name": "n_slide_popup (release mode)",
-      "cwd": "packages/n_slide_popup/example",
+      "name": "align_overlay (release mode)",
+      "cwd": "packages/align_overlay/example",
       "request": "launch",
       "type": "dart",
       "program": "lib/main.dart",

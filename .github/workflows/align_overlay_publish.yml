@@ -1,0 +1,48 @@
+name: Publish align_overlay
+
+# Tag example: align_overlay-v0.1.0
+on:
+  push:
+    tags:
+      - 'align_overlay-v*.*.*'
+
+jobs:
+  publish:
+    permissions:
+      id-token: write
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/align_overlay
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Ensure Flutter bin is first in PATH
+        run: echo "$HOME/flutter/bin" >> $GITHUB_PATH
+
+      - name: Verify Flutter & Dart
+        run: |
+          which flutter
+          which dart
+          flutter --version
+          dart --version
+
+      - name: Resolve workspace dependencies
+        working-directory: .
+        run: dart pub get
+
+      - name: Publish package to pub.dev
+        uses: k-paxian/dart-package-publisher@v1.5.1
+        with:
+          relativePath: packages/align_overlay
+          credentialJson: ${{ secrets.CREDENTIAL_JSON }}
+          flutter: true
+          skipTests: true
+          dryRunOnly: false
