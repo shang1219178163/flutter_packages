@@ -1,39 +1,41 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# enhance_widget
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+[![pub](https://img.shields.io/pub/v/enhance_widget.svg)](https://pub.dev/packages/enhance_widget)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Collection of enhanced Flutter widgets with a unified `En*` API.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Expansion**: `EnExpansionPanelList`, `EnExpansionTile`, `EnExpandListView`
+- **Stepper**: `EnStepper` / `EnStep` with alternate title/line positions
+- **Bottom navigation**: `EnBottomNavigationBar` with `onDoubleTap` and `tileBuilder`
+- **Decoration**: `EnBoxDecoration` (inner shadows) and `EnDecorationImage` (placeholder / offset)
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```yaml
+dependencies:
+  enhance_widget: ^0.1.0
+```
+
+```dart
+import 'package:enhance_widget/enhance_widget.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+EnStepper(
+  type: StepperType.horizontal,
+  horizontalTitlePosition: HorizontalTitlePosition.bottom,
+  steps: [
+    EnStep(title: Text('Step 1'), content: Text('Content 1')),
+  ],
+);
 ```
+
+See `example/` for demos of all widgets.
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Issues and PRs: https://github.com/shang1219178163/flutter_packages

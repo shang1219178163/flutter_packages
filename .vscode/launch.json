@@ -97,6 +97,29 @@
       "flutterMode": "release"
     },
     {
+      "name": "enhance_widget",
+      "cwd": "packages/enhance_widget/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart"
+    },
+    {
+      "name": "enhance_widget (profile mode)",
+      "cwd": "packages/enhance_widget/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "enhance_widget (release mode)",
+      "cwd": "packages/enhance_widget/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "release"
+    },
+    {
       "name": "align_overlay",
       "cwd": "packages/align_overlay/example",
       "request": "launch",

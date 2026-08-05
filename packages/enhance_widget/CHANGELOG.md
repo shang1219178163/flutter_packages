@@ -1,3 +1,8 @@
-## 0.0.1
+## 0.1.0
 
-* TODO: Describe initial release.
+* Initial release aggregating enhanced widgets under a unified `En*` API:
+  * `EnExpansionPanel` / `EnExpansionPanelList` / `EnExpansionTile` / `EnExpandListView`
+  * `EnStepper` / `EnStep`
+  * `EnBottomNavigationBar`
+  * `EnBoxDecoration`
+  * `EnDecorationImage`

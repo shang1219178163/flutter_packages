@@ -11,6 +11,7 @@ flutter_packages/
 │   ├── ddlog/                            # Logging helpers
 │   ├── enhance_expansion_panel/          # Enhanced ExpansionPanel
 │   ├── enhance_stepper/                  # Enhanced Stepper
+│   ├── enhance_widget/                   # Aggregated En* widgets
 │   ├── route_stack_manager/              # Route stack listener
 │   └── tap_track/                        # Tap-event global tracking
 │       └── example/                      # Each package keeps its own example/
@@ -54,6 +55,7 @@ cd packages/tap_track/example && flutter run
 cd packages/route_stack_manager/example && flutter run
 cd packages/enhance_expansion_panel/example && flutter run
 cd packages/enhance_stepper/example && flutter run
+cd packages/enhance_widget/example && flutter run
 
 # 列出 workspace 包
 dart run melos list
