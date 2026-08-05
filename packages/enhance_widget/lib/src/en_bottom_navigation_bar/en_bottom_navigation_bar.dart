@@ -8,7 +8,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:vector_math/vector_math_64.dart' show Vector3;
 
-/// 修改: 官方 BottomNavigationBar 不支持 onDoubleTap,新增 `ValueChanged<int>?` onDoubleTap;
+/// 修改: 官方 BottomNavigationBar 不支持 onDoubleTap,新增 onDoubleTap 手势;
 /// 新增: tileBuilder,方便根据选中状态自定义
 
 class EnBottomNavigationBar extends StatefulWidget {

@@ -1,17 +1,9 @@
 # enhance_stepper
 
-> **⚠️ Deprecated / 已弃用**
->
-> This package is no longer actively maintained. Please migrate to
-> [`enhance_widget`](https://pub.dev/packages/enhance_widget)
-> (`EnStepper` / `EnStep`).
->
-> 本包已停止积极维护，请改用 [`enhance_widget`](https://pub.dev/packages/enhance_widget)。
-
 [![pub](https://img.shields.io/pub/v/enhance_stepper.svg)](https://pub.dev/packages/enhance_stepper)
 
 ```dart
-enhance_stepper: ^2.0.1
+enhance_stepper: ^2.0.0
 ```
 
 An easy to implement Extra features.
@@ -31,8 +23,8 @@ EnhanceStepper(
 ## Screenshots
 
 <p>
-<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_stepper/screenshot/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20-%202021-07-02%20at%2015.53.19.png" width="220">
-<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_stepper/screenshot/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20-%202021-07-02%20at%2015.53.22.png" width="220">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_stepper/screenshot/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20-%202021-07-02%20at%2015.53.19.png" width="30%">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_stepper/screenshot/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20-%202021-07-02%20at%2015.53.22.png" width="30%">
 </p>
 
 
