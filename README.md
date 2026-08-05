@@ -73,10 +73,10 @@ dart run melos list
 # 格式：<package>-v<semver>
 git tag align_overlay-v1.0.0
 git tag ddlog-v1.1.0
-git tag enhance_expansion_panel-v0.8.0
+git tag enhance_expansion_panel-v1.0.0
 git tag enhance_stepper-v1.1.0
 git tag route_stack_manager-v1.3.0
-git tag tap_track-v0.3.0
+git tag tap_track-v1.0.0
 
 # 推送单个 tag 触发对应 workflow
 git push origin align_overlay-v1.0.0
@@ -89,10 +89,10 @@ git push origin --tags
 |---------|----------|----------|---------|
 | `align_overlay` | `align_overlay-v1.0.0` | `align_overlay_publish.yml` | [link](https://pub.dev/packages/align_overlay) |
 | `ddlog` | `ddlog-v1.1.0` | `ddlog_publish.yml` | [link](https://pub.dev/packages/ddlog) |
-| `enhance_expansion_panel` | `enhance_expansion_panel-v0.8.0` | `enhance_expansion_panel_publish.yml` | [link](https://pub.dev/packages/enhance_expansion_panel) |
+| `enhance_expansion_panel` | `enhance_expansion_panel-v1.0.0` | `enhance_expansion_panel_publish.yml` | [link](https://pub.dev/packages/enhance_expansion_panel) |
 | `enhance_stepper` | `enhance_stepper-v1.1.0` | `enhance_stepper_publish.yml` | [link](https://pub.dev/packages/enhance_stepper) |
 | `route_stack_manager` | `route_stack_manager-v1.3.0` | `route_stack_manager_publish.yml` | [link](https://pub.dev/packages/route_stack_manager) |
-| `tap_track` | `tap_track-v0.3.0` | `tap_track_publish.yml` | [link](https://pub.dev/packages/tap_track) |
+| `tap_track` | `tap_track-v1.0.0` | `tap_track_publish.yml` | [link](https://pub.dev/packages/tap_track) |
 
 ## 新增 package
 
