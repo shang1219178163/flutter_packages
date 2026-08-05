@@ -28,7 +28,7 @@ Enhanced Flutter widgets under a unified `En*` API — drop-in upgrades over Mat
 
 ```yaml
 dependencies:
-  enhance_widget: ^1.0.0
+  enhance_widget: ^1.0.1
 ```
 
 ```dart
