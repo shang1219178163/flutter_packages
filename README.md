@@ -11,6 +11,12 @@ flutter_packages/
 │   ├── ddlog/                            # Logging helpers
 │   ├── enhance_expansion_panel/          # Enhanced ExpansionPanel
 │   ├── enhance_stepper/                  # Enhanced Stepper
+│   ├── enhance_widget/                   # Aggregated En* widgets
+│   │   ├── EnExpansionPanel / List / Tile / ExpandListView
+│   │   ├── EnStepper / EnStep
+│   │   ├── EnBottomNavigationBar
+│   │   ├── EnBoxDecoration
+│   │   └── EnDecorationImage
 │   ├── route_stack_manager/              # Route stack listener
 │   └── tap_track/                        # Tap-event global tracking
 │       └── example/                      # Each package keeps its own example/
@@ -54,6 +60,7 @@ cd packages/tap_track/example && flutter run
 cd packages/route_stack_manager/example && flutter run
 cd packages/enhance_expansion_panel/example && flutter run
 cd packages/enhance_stepper/example && flutter run
+cd packages/enhance_widget/example && flutter run
 
 # 列出 workspace 包
 dart run melos list
@@ -75,6 +82,7 @@ git tag align_overlay-v1.0.0
 git tag ddlog-v1.1.0
 git tag enhance_expansion_panel-v2.0.0
 git tag enhance_stepper-v2.0.0
+git tag enhance_widget-v1.0.0
 git tag route_stack_manager-v1.3.0
 git tag tap_track-v1.0.0
 
@@ -91,6 +99,7 @@ git push origin --tags
 | `ddlog` | `ddlog-v1.1.0` | `ddlog_publish.yml` | [link](https://pub.dev/packages/ddlog) |
 | `enhance_expansion_panel` | `enhance_expansion_panel-v2.0.0` | `enhance_expansion_panel_publish.yml` | [link](https://pub.dev/packages/enhance_expansion_panel) |
 | `enhance_stepper` | `enhance_stepper-v2.0.0` | `enhance_stepper_publish.yml` | [link](https://pub.dev/packages/enhance_stepper) |
+| `enhance_widget` | `enhance_widget-v1.0.0` | `enhance_widget_publish.yml` | [link](https://pub.dev/packages/enhance_widget) |
 | `route_stack_manager` | `route_stack_manager-v1.3.0` | `route_stack_manager_publish.yml` | [link](https://pub.dev/packages/route_stack_manager) |
 | `tap_track` | `tap_track-v1.0.0` | `tap_track_publish.yml` | [link](https://pub.dev/packages/tap_track) |
 

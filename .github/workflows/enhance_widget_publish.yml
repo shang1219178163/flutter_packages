@@ -1,0 +1,62 @@
+name: Publish enhance_widget
+
+# Package: https://pub.dev/packages/enhance_widget
+# Tag example: enhance_widget-v1.0.0
+on:
+  push:
+    tags:
+      - 'enhance_widget-v*.*.*'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    permissions:
+      id-token: write
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/enhance_widget
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Ensure Flutter bin is first in PATH
+        run: echo "$HOME/flutter/bin" >> $GITHUB_PATH
+
+      - name: Verify Flutter & Dart
+        run: |
+          which flutter
+          which dart
+          flutter --version
+          dart --version
+
+      - name: Resolve workspace dependencies
+        working-directory: .
+        run: dart pub get
+
+      - name: Publish package to pub.dev
+        env:
+          PUB_CREDENTIALS: ${{ secrets.CREDENTIAL_JSON }}
+        run: |
+          mkdir -p "$HOME/.config/dart"
+          printenv PUB_CREDENTIALS > "$HOME/.config/dart/pub-credentials.json"
+          VERSION=$(awk '/^version:/ {print $2; exit}' pubspec.yaml)
+          echo "Publishing enhance_widget $VERSION"
+          flutter pub publish --dry-run
+          flutter pub publish --force
+
+      - name: Package on pub.dev
+        if: always()
+        run: |
+          {
+            echo "## Publish enhance_widget"
+            echo ""
+            echo "- Package: [https://pub.dev/packages/enhance_widget](https://pub.dev/packages/enhance_widget)"
+            echo "- Versions: [https://pub.dev/packages/enhance_widget/versions](https://pub.dev/packages/enhance_widget/versions)"
+          } >> "$GITHUB_STEP_SUMMARY"

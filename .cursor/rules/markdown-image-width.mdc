@@ -1,0 +1,18 @@
+---
+description: Markdown screenshot/image width convention
+globs: "**/*.md"
+alwaysApply: false
+---
+
+# Markdown images
+
+When embedding screenshots or demo images in Markdown (README, docs, changelogs):
+
+- Prefer `width="30%"` on `<img>` tags
+- Do **not** use fixed pixel widths like `width="220"`
+
+Example:
+
+```html
+<img src="..." width="30%" alt="...">
+```
