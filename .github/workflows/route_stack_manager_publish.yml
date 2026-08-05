@@ -6,6 +6,7 @@ on:
   push:
     tags:
       - 'route_stack_manager-v*.*.*'
+  workflow_dispatch:
 
 jobs:
   publish:

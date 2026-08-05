@@ -6,6 +6,7 @@ on:
   push:
     tags:
       - 'tap_track-v*.*.*'
+  workflow_dispatch:
 
 jobs:
   publish:
