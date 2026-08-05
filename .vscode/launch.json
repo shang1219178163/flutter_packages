@@ -51,46 +51,46 @@
       "flutterMode": "release"
     },
     {
-      "name": "enhance_expansion_panel",
-      "cwd": "packages/enhance_expansion_panel/example",
+      "name": "en_expansion_panel",
+      "cwd": "packages/en_expansion_panel/example",
       "request": "launch",
       "type": "dart",
       "program": "lib/main.dart"
     },
     {
-      "name": "enhance_expansion_panel (profile mode)",
-      "cwd": "packages/enhance_expansion_panel/example",
+      "name": "en_expansion_panel (profile mode)",
+      "cwd": "packages/en_expansion_panel/example",
       "request": "launch",
       "type": "dart",
       "program": "lib/main.dart",
       "flutterMode": "profile"
     },
     {
-      "name": "enhance_expansion_panel (release mode)",
-      "cwd": "packages/enhance_expansion_panel/example",
+      "name": "en_expansion_panel (release mode)",
+      "cwd": "packages/en_expansion_panel/example",
       "request": "launch",
       "type": "dart",
       "program": "lib/main.dart",
       "flutterMode": "release"
     },
     {
-      "name": "enhance_stepper",
-      "cwd": "packages/enhance_stepper/example",
+      "name": "en_stepper",
+      "cwd": "packages/en_stepper/example",
       "request": "launch",
       "type": "dart",
       "program": "lib/main.dart"
     },
     {
-      "name": "enhance_stepper (profile mode)",
-      "cwd": "packages/enhance_stepper/example",
+      "name": "en_stepper (profile mode)",
+      "cwd": "packages/en_stepper/example",
       "request": "launch",
       "type": "dart",
       "program": "lib/main.dart",
       "flutterMode": "profile"
     },
     {
-      "name": "enhance_stepper (release mode)",
-      "cwd": "packages/enhance_stepper/example",
+      "name": "en_stepper (release mode)",
+      "cwd": "packages/en_stepper/example",
       "request": "launch",
       "type": "dart",
       "program": "lib/main.dart",

@@ -1,0 +1,62 @@
+name: Publish en_stepper
+
+# Package: https://pub.dev/packages/en_stepper
+# Tag example: en_stepper-v2.0.0
+on:
+  push:
+    tags:
+      - 'en_stepper-v*.*.*'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    permissions:
+      id-token: write
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/en_stepper
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Ensure Flutter bin is first in PATH
+        run: echo "$HOME/flutter/bin" >> $GITHUB_PATH
+
+      - name: Verify Flutter & Dart
+        run: |
+          which flutter
+          which dart
+          flutter --version
+          dart --version
+
+      - name: Resolve workspace dependencies
+        working-directory: .
+        run: dart pub get
+
+      - name: Publish package to pub.dev
+        env:
+          PUB_CREDENTIALS: ${{ secrets.CREDENTIAL_JSON }}
+        run: |
+          mkdir -p "$HOME/.config/dart"
+          printenv PUB_CREDENTIALS > "$HOME/.config/dart/pub-credentials.json"
+          VERSION=$(awk '/^version:/ {print $2; exit}' pubspec.yaml)
+          echo "Publishing en_stepper $VERSION"
+          flutter pub publish --dry-run
+          flutter pub publish --force
+
+      - name: Package on pub.dev
+        if: always()
+        run: |
+          {
+            echo "## Publish en_stepper"
+            echo ""
+            echo "- Package: [https://pub.dev/packages/en_stepper](https://pub.dev/packages/en_stepper)"
+            echo "- Versions: [https://pub.dev/packages/en_stepper/versions](https://pub.dev/packages/en_stepper/versions)"
+          } >> "$GITHUB_STEP_SUMMARY"

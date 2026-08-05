@@ -9,8 +9,8 @@ flutter_packages/
 ├── packages/
 │   ├── align_overlay/                    # Alignment-driven overlay / sheet / drawer
 │   ├── ddlog/                            # Logging helpers
-│   ├── enhance_expansion_panel/          # Enhanced ExpansionPanel
-│   ├── enhance_stepper/                  # Enhanced Stepper
+│   ├── en_expansion_panel/               # Enhanced ExpansionPanel
+│   ├── en_stepper/                       # Enhanced Stepper
 │   ├── route_stack_manager/              # Route stack listener
 │   └── tap_track/                        # Tap-event global tracking
 │       └── example/                      # Each package keeps its own example/
@@ -43,7 +43,7 @@ dart run melos run test               # 全仓库 flutter test
 # 单独跑某个包
 cd packages/ddlog && flutter test
 cd packages/tap_track && flutter test
-cd packages/enhance_stepper && flutter test
+cd packages/en_stepper && flutter test
 cd apps/example && flutter test
 
 # 运行 example 应用
@@ -52,8 +52,8 @@ cd packages/align_overlay/example && flutter run
 cd packages/ddlog/example && flutter run
 cd packages/tap_track/example && flutter run
 cd packages/route_stack_manager/example && flutter run
-cd packages/enhance_expansion_panel/example && flutter run
-cd packages/enhance_stepper/example && flutter run
+cd packages/en_expansion_panel/example && flutter run
+cd packages/en_stepper/example && flutter run
 
 # 列出 workspace 包
 dart run melos list
@@ -73,8 +73,8 @@ dart run melos list
 # 格式：<package>-v<semver>
 git tag align_overlay-v1.0.0
 git tag ddlog-v1.1.0
-git tag enhance_expansion_panel-v1.1.0
-git tag enhance_stepper-v1.2.0
+git tag en_expansion_panel-v2.0.0
+git tag en_stepper-v2.0.0
 git tag route_stack_manager-v1.3.0
 git tag tap_track-v1.0.0
 
@@ -89,8 +89,8 @@ git push origin --tags
 |---------|----------|----------|---------|
 | `align_overlay` | `align_overlay-v1.0.0` | `align_overlay_publish.yml` | [link](https://pub.dev/packages/align_overlay) |
 | `ddlog` | `ddlog-v1.1.0` | `ddlog_publish.yml` | [link](https://pub.dev/packages/ddlog) |
-| `enhance_expansion_panel` | `enhance_expansion_panel-v1.1.0` | `enhance_expansion_panel_publish.yml` | [link](https://pub.dev/packages/enhance_expansion_panel) |
-| `enhance_stepper` | `enhance_stepper-v1.2.0` | `enhance_stepper_publish.yml` | [link](https://pub.dev/packages/enhance_stepper) |
+| `en_expansion_panel` | `en_expansion_panel-v2.0.0` | `en_expansion_panel_publish.yml` | [link](https://pub.dev/packages/en_expansion_panel) |
+| `en_stepper` | `en_stepper-v2.0.0` | `en_stepper_publish.yml` | [link](https://pub.dev/packages/en_stepper) |
 | `route_stack_manager` | `route_stack_manager-v1.3.0` | `route_stack_manager_publish.yml` | [link](https://pub.dev/packages/route_stack_manager) |
 | `tap_track` | `tap_track-v1.0.0` | `tap_track_publish.yml` | [link](https://pub.dev/packages/tap_track) |
 
