@@ -1,11 +1,11 @@
-name: Publish align_overlay
+name: Publish enhance_expansion_panel
 
-# Package: https://pub.dev/packages/align_overlay
-# Tag example: align_overlay-v1.0.0
+# Package: https://pub.dev/packages/enhance_expansion_panel
+# Tag example: enhance_expansion_panel-v1.0.0
 on:
   push:
     tags:
-      - 'align_overlay-v*.*.*'
+      - 'enhance_expansion_panel-v*.*.*'
 
 jobs:
   publish:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: packages/align_overlay
+        working-directory: packages/enhance_expansion_panel
 
     steps:
       - uses: actions/checkout@v4
@@ -42,7 +42,7 @@ jobs:
       - name: Publish package to pub.dev
         uses: k-paxian/dart-package-publisher@v1.5.1
         with:
-          relativePath: packages/align_overlay
+          relativePath: packages/enhance_expansion_panel
           credentialJson: ${{ secrets.CREDENTIAL_JSON }}
           flutter: true
           skipTests: true
@@ -52,8 +52,8 @@ jobs:
         if: always()
         run: |
           {
-            echo "## Publish align_overlay"
+            echo "## Publish enhance_expansion_panel"
             echo ""
-            echo "- Package: [https://pub.dev/packages/align_overlay](https://pub.dev/packages/align_overlay)"
-            echo "- Versions: [https://pub.dev/packages/align_overlay/versions](https://pub.dev/packages/align_overlay/versions)"
+            echo "- Package: [https://pub.dev/packages/enhance_expansion_panel](https://pub.dev/packages/enhance_expansion_panel)"
+            echo "- Versions: [https://pub.dev/packages/enhance_expansion_panel/versions](https://pub.dev/packages/enhance_expansion_panel/versions)"
           } >> "$GITHUB_STEP_SUMMARY"

@@ -1,3 +1,7 @@
+## 1.3.0
+
+* Publish from flutter_packages monorepo.
+
 ## 1.2.1
 
 * TODO: add github action

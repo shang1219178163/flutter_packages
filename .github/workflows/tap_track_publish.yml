@@ -1,6 +1,7 @@
 name: Publish tap_track
 
-# Tag example: tap_track-v0.2.0
+# Package: https://pub.dev/packages/tap_track
+# Tag example: tap_track-v1.0.0
 on:
   push:
     tags:
@@ -46,3 +47,13 @@ jobs:
           flutter: true
           skipTests: true
           dryRunOnly: false
+
+      - name: Package on pub.dev
+        if: always()
+        run: |
+          {
+            echo "## Publish tap_track"
+            echo ""
+            echo "- Package: [https://pub.dev/packages/tap_track](https://pub.dev/packages/tap_track)"
+            echo "- Versions: [https://pub.dev/packages/tap_track/versions](https://pub.dev/packages/tap_track/versions)"
+          } >> "$GITHUB_STEP_SUMMARY"
