@@ -1,3 +1,7 @@
+## 1.1.0
+
+* Update README screenshots with remote monorepo image links.
+
 ## 1.0.0
 
 * Publish from flutter_packages monorepo.

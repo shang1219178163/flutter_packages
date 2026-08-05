@@ -3,7 +3,7 @@
 [![pub](https://img.shields.io/pub/v/enhance_stepper.svg)](https://pub.dev/packages/enhance_stepper)
 
 ```dart
-enhance_stepper: ^1.0.1
+enhance_stepper: ^1.2.0
 ```
 
 An easy to implement Extra features.
@@ -22,9 +22,10 @@ EnhanceStepper(
 ```
 ## Screenshots
 
-![](https://github.com/shang1219178163/enhance_stepper/blob/main/screenshot/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20-%202021-07-02%20at%2015.53.19.png?raw=true)
-
-![](https://github.com/shang1219178163/enhance_stepper/blob/main/screenshot/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20-%202021-07-02%20at%2015.53.22.png?raw=true)
+<p>
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_stepper/screenshot/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20-%202021-07-02%20at%2015.53.19.png" width="220">
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/enhance_stepper/screenshot/Simulator%20Screen%20Shot%20-%20iPhone%2011%20Pro%20-%202021-07-02%20at%2015.53.22.png" width="220">
+</p>
 
 
 ## Getting Started
