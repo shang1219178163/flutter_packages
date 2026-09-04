@@ -67,8 +67,8 @@ cd packages/animated_halo/example
 flutter run
 ```
 
-It lets you tweak `size`, `spacing`, `strokeWidth`, `innerStrokeWidth`, `duration`,
-and the `child` image, plus outer/inner colors.
+It lets you tweak `size`, `spacing`, `strokeWidth`, and `innerStrokeWidth` with
+live sliders, with a circular avatar shown inside the inner ring.
 
 ## Additional information
 

@@ -1,21 +1,19 @@
-name: example
-description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: "none" # Remove this line if you wish to publish to pub.dev
-
+name: animated_halo_example
+description: Example app for the animated_halo package.
+publish_to: none
 version: 1.0.0+1
 
 environment:
   sdk: ^3.6.2
+
+resolution: workspace
 
 dependencies:
   flutter:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
-  animated_halo:
-    path: ../
+  animated_halo: any
 
 dev_dependencies:
   flutter_test:
