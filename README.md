@@ -33,7 +33,7 @@ dart run melos run get
 ```
 
 > Melos 6 + Dart workspaces 请用 `dart pub get`，不要用 `melos bootstrap`
->（会生成 `pubspec_overrides.yaml`，与 `resolution: workspace` 冲突）。
+> （会生成 `pubspec_overrides.yaml`，与 `resolution: workspace` 冲突）。
 
 ## 常用命令
 
@@ -93,15 +93,15 @@ git push origin align_overlay-v1.0.0
 git push origin --tags
 ```
 
-| Package | Tag 示例 | Workflow | pub.dev |
-|---------|----------|----------|---------|
-| `align_overlay` | `align_overlay-v1.0.0` | `align_overlay_publish.yml` | [link](https://pub.dev/packages/align_overlay) |
-| `ddlog` | `ddlog-v1.1.0` | `ddlog_publish.yml` | [link](https://pub.dev/packages/ddlog) |
+| Package                   | Tag 示例                         | Workflow                              | pub.dev                                                  |
+| ------------------------- | -------------------------------- | ------------------------------------- | -------------------------------------------------------- |
+| `align_overlay`           | `align_overlay-v1.0.0`           | `align_overlay_publish.yml`           | [link](https://pub.dev/packages/align_overlay)           |
+| `ddlog`                   | `ddlog-v1.1.0`                   | `ddlog_publish.yml`                   | [link](https://pub.dev/packages/ddlog)                   |
 | `enhance_expansion_panel` | `enhance_expansion_panel-v2.0.0` | `enhance_expansion_panel_publish.yml` | [link](https://pub.dev/packages/enhance_expansion_panel) |
-| `enhance_stepper` | `enhance_stepper-v2.0.0` | `enhance_stepper_publish.yml` | [link](https://pub.dev/packages/enhance_stepper) |
-| `enhance_widget` | `enhance_widget-v1.0.0` | `enhance_widget_publish.yml` | [link](https://pub.dev/packages/enhance_widget) |
-| `route_stack_manager` | `route_stack_manager-v1.3.0` | `route_stack_manager_publish.yml` | [link](https://pub.dev/packages/route_stack_manager) |
-| `tap_track` | `tap_track-v1.0.0` | `tap_track_publish.yml` | [link](https://pub.dev/packages/tap_track) |
+| `enhance_stepper`         | `enhance_stepper-v2.0.0`         | `enhance_stepper_publish.yml`         | [link](https://pub.dev/packages/enhance_stepper)         |
+| `enhance_widget`          | `enhance_widget-v1.0.0`          | `enhance_widget_publish.yml`          | [link](https://pub.dev/packages/enhance_widget)          |
+| `route_stack_manager`     | `route_stack_manager-v1.3.0`     | `route_stack_manager_publish.yml`     | [link](https://pub.dev/packages/route_stack_manager)     |
+| `tap_track`               | `tap_track-v1.0.0`               | `tap_track_publish.yml`               | [link](https://pub.dev/packages/tap_track)               |
 
 ## 新增 package
 

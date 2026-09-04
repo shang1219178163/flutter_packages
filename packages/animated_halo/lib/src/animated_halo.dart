@@ -38,6 +38,7 @@ class AnimatedHalo extends StatefulWidget {
 
   /// 一轮动画时长，稿面 1483ms。
   final Duration duration;
+
   /// 中间内容，会被裁成圆形。
   final Widget child;
 
@@ -45,7 +46,8 @@ class AnimatedHalo extends StatefulWidget {
   State<AnimatedHalo> createState() => _AnimatedHaloState();
 }
 
-class _AnimatedHaloState extends State<AnimatedHalo> with SingleTickerProviderStateMixin {
+class _AnimatedHaloState extends State<AnimatedHalo>
+    with SingleTickerProviderStateMixin {
   late final controller = AnimationController(
     vsync: this,
     duration: widget.duration,
@@ -70,7 +72,8 @@ class _AnimatedHaloState extends State<AnimatedHalo> with SingleTickerProviderSt
   @override
   Widget build(BuildContext context) {
     final scale = widget.size / 72;
-    final imageSize = ((30 - widget.innerStrokeWidth / 2) * 2 * scale).clamp(0.0, widget.size);
+    final imageSize = ((30 - widget.innerStrokeWidth / 2) * 2 * scale)
+        .clamp(0.0, widget.size);
     return SizedBox(
       width: widget.size,
       height: widget.size,
@@ -146,7 +149,8 @@ class _AnimatedHaloPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = strokeWidth * scale
       ..color = color.withValues(alpha: outerOpacity);
-    canvas.drawCircle(center, _outerRadius(frame, innerRadius, scale), outerPaint);
+    canvas.drawCircle(
+        center, _outerRadius(frame, innerRadius, scale), outerPaint);
   }
 
   double _outerRadius(double frame, double innerRadius, double scale) {

@@ -47,16 +47,16 @@ AnimatedHalo(
 
 ### Parameters
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| `size` | `double` | `72` | Canvas edge length. |
-| `color` | `Color` | `0xFF51D3B1` | Outer ring stroke color. |
-| `innerColor` | `Color` | `0xFF00B887` | Inner ring stroke color. |
-| `spacing` | `double` | `6` | Outer-ring radius delta relative to the inner ring. |
-| `strokeWidth` | `double` | `2` | Outer ring stroke width. |
-| `innerStrokeWidth` | `double` | `4` | Inner ring stroke width. |
-| `duration` | `Duration` | `1483ms` | Duration of one animation loop. |
-| `child` | `Widget` | — | Content clipped to a circle inside the inner ring. |
+| Param              | Type       | Default      | Description                                         |
+| ------------------ | ---------- | ------------ | --------------------------------------------------- |
+| `size`             | `double`   | `72`         | Canvas edge length.                                 |
+| `color`            | `Color`    | `0xFF51D3B1` | Outer ring stroke color.                            |
+| `innerColor`       | `Color`    | `0xFF00B887` | Inner ring stroke color.                            |
+| `spacing`          | `double`   | `6`          | Outer-ring radius delta relative to the inner ring. |
+| `strokeWidth`      | `double`   | `2`          | Outer ring stroke width.                            |
+| `innerStrokeWidth` | `double`   | `4`          | Inner ring stroke width.                            |
+| `duration`         | `Duration` | `1483ms`     | Duration of one animation loop.                     |
+| `child`            | `Widget`   | —            | Content clipped to a circle inside the inner ring.  |
 
 ## Example
 

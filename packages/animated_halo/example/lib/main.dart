@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pages/animated_halo_page.dart';
+import 'pages/my_home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: const AnimatedHaloPage(title: 'AnimatedHalo'),
+      home: const MyHomePage(title: 'AnimatedHalo'),
     );
   }
 }
