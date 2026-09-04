@@ -7,6 +7,8 @@ environment:
 
 workspace:
   - apps/example
+  - packages/animated_halo
+  - packages/animated_halo/example
   - packages/ddlog
   - packages/ddlog/example
   - packages/enhance_expansion_panel
