@@ -7,6 +7,8 @@ environment:
 
 workspace:
   - apps/example
+  - packages/align_overlay
+  - packages/align_overlay/example
   - packages/animated_halo
   - packages/animated_halo/example
   - packages/ddlog
@@ -17,8 +19,6 @@ workspace:
   - packages/enhance_stepper/example
   - packages/enhance_widget
   - packages/enhance_widget/example
-  - packages/align_overlay
-  - packages/align_overlay/example
   - packages/route_stack_manager
   - packages/route_stack_manager/example
   - packages/tap_track

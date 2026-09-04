@@ -8,6 +8,7 @@ flutter_packages/
 │   └── example/                          # Demo app
 ├── packages/
 │   ├── align_overlay/                    # Alignment-driven overlay / sheet / drawer
+│   ├── animated_halo/                    # Pulsing halo ring widget
 │   ├── ddlog/                            # Logging helpers
 │   ├── enhance_expansion_panel/          # Enhanced ExpansionPanel
 │   ├── enhance_stepper/                  # Enhanced Stepper
@@ -33,7 +34,7 @@ dart run melos run get
 ```
 
 > Melos 6 + Dart workspaces 请用 `dart pub get`，不要用 `melos bootstrap`
->（会生成 `pubspec_overrides.yaml`，与 `resolution: workspace` 冲突）。
+> （会生成 `pubspec_overrides.yaml`，与 `resolution: workspace` 冲突）。
 
 ## 常用命令
 
@@ -49,12 +50,14 @@ dart run melos run test               # 全仓库 flutter test
 # 单独跑某个包
 cd packages/ddlog && flutter test
 cd packages/tap_track && flutter test
+cd packages/animated_halo && flutter test
 cd packages/enhance_stepper && flutter test
 cd apps/example && flutter test
 
 # 运行 example 应用
 cd apps/example && flutter run
 cd packages/align_overlay/example && flutter run
+cd packages/animated_halo/example && flutter run
 cd packages/ddlog/example && flutter run
 cd packages/tap_track/example && flutter run
 cd packages/route_stack_manager/example && flutter run
@@ -79,6 +82,7 @@ dart run melos list
 ```bash
 # 格式：<package>-v<semver>
 git tag align_overlay-v1.0.0
+git tag animated_halo-v1.0.0
 git tag ddlog-v1.1.0
 git tag enhance_expansion_panel-v2.0.0
 git tag enhance_stepper-v2.0.0
@@ -93,15 +97,16 @@ git push origin align_overlay-v1.0.0
 git push origin --tags
 ```
 
-| Package | Tag 示例 | Workflow | pub.dev |
-|---------|----------|----------|---------|
-| `align_overlay` | `align_overlay-v1.0.0` | `align_overlay_publish.yml` | [link](https://pub.dev/packages/align_overlay) |
-| `ddlog` | `ddlog-v1.1.0` | `ddlog_publish.yml` | [link](https://pub.dev/packages/ddlog) |
+| Package                   | Tag 示例                         | Workflow                              | pub.dev                                                  |
+| ------------------------- | -------------------------------- | ------------------------------------- | -------------------------------------------------------- |
+| `align_overlay`           | `align_overlay-v1.0.0`           | `align_overlay_publish.yml`           | [link](https://pub.dev/packages/align_overlay)           |
+| `animated_halo`           | `animated_halo-v1.0.0`           | `animated_halo_publish.yml`           | [link](https://pub.dev/packages/animated_halo)           |
+| `ddlog`                   | `ddlog-v1.1.0`                   | `ddlog_publish.yml`                   | [link](https://pub.dev/packages/ddlog)                   |
 | `enhance_expansion_panel` | `enhance_expansion_panel-v2.0.0` | `enhance_expansion_panel_publish.yml` | [link](https://pub.dev/packages/enhance_expansion_panel) |
-| `enhance_stepper` | `enhance_stepper-v2.0.0` | `enhance_stepper_publish.yml` | [link](https://pub.dev/packages/enhance_stepper) |
-| `enhance_widget` | `enhance_widget-v1.0.0` | `enhance_widget_publish.yml` | [link](https://pub.dev/packages/enhance_widget) |
-| `route_stack_manager` | `route_stack_manager-v1.3.0` | `route_stack_manager_publish.yml` | [link](https://pub.dev/packages/route_stack_manager) |
-| `tap_track` | `tap_track-v1.0.0` | `tap_track_publish.yml` | [link](https://pub.dev/packages/tap_track) |
+| `enhance_stepper`         | `enhance_stepper-v2.0.0`         | `enhance_stepper_publish.yml`         | [link](https://pub.dev/packages/enhance_stepper)         |
+| `enhance_widget`          | `enhance_widget-v1.0.0`          | `enhance_widget_publish.yml`          | [link](https://pub.dev/packages/enhance_widget)          |
+| `route_stack_manager`     | `route_stack_manager-v1.3.0`     | `route_stack_manager_publish.yml`     | [link](https://pub.dev/packages/route_stack_manager)     |
+| `tap_track`               | `tap_track-v1.0.0`               | `tap_track_publish.yml`               | [link](https://pub.dev/packages/tap_track)               |
 
 ## 新增 package
 
