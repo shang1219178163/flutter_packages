@@ -37,11 +37,13 @@ AnimatedHalo(
   strokeWidth: 2,
   innerStrokeWidth: 4,
   duration: const Duration(milliseconds: 1483),
-  child: ClipOval(
+    child: ClipOval(
     child: Image.network('https://example.com/avatar.jpg'),
   ),
 )
 ```
+
+<img src="https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/animated_halo/example/screenshots/halo_pulse.png" width="30%" alt="AnimatedHalo pulse preview">
 
 ### Parameters
 
