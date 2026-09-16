@@ -1,0 +1,29 @@
+---
+description: Prefer official Flutter/Dart skills and Dart MCP for this monorepo. Use when analyzing, testing, formatting, fixing, or running Flutter packages under packages/ or apps/.
+alwaysApply: true
+---
+
+# Flutter / Dart MCP + official skills
+
+This repo is a Dart **pub workspace** (`flutter_packages`) on Flutter **3.41.9**.
+
+## SDK
+
+- Flutter: `/Users/shang/fvm/versions/3.41.9`
+- Prefer `fvm flutter` / the Dart MCP server over a system Flutter.
+
+## Dart MCP (required for analysis / runtime)
+
+Before calling any Dart MCP tool on this repo:
+
+1. `add_roots` with `file:///Users/shang/GitHub/flutter_packages` (covers all workspace packages).
+2. Prefer MCP tools over raw shell when available: `analyze_files`, `dart_format`, `dart_fix`, `pub`, `hot_reload`, `hot_restart`, `launch_app`, `list_devices`, etc.
+3. For package-scoped work, pass roots under `file:///Users/shang/GitHub/flutter_packages/packages/<name>` or `.../apps/example`.
+
+## Official skills
+
+Project skills live in `.agents/skills/` (symlinked under `.cursor/skills/`). Prefer them for Flutter/Dart happy-path tasks (widget tests, localization, routing, responsive layout, static analysis, etc.).
+
+## Packages
+
+Workspace members: `align_overlay`, `animated_halo`, `ddlog`, `enhance_expansion_panel`, `enhance_stepper`, `enhance_widget`, `route_stack_manager`, `tap_track`, plus `apps/example`. Each package keeps its own `example/`.

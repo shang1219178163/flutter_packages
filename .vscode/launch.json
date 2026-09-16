@@ -143,6 +143,29 @@
       "flutterMode": "release"
     },
     {
+      "name": "animated_halo",
+      "cwd": "packages/animated_halo/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart"
+    },
+    {
+      "name": "animated_halo (profile mode)",
+      "cwd": "packages/animated_halo/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "animated_halo (release mode)",
+      "cwd": "packages/animated_halo/example",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "flutterMode": "release"
+    },
+    {
       "name": "route_stack_manager",
       "cwd": "packages/route_stack_manager/example",
       "request": "launch",
