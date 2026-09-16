@@ -120,3 +120,14 @@ flutter create --template=package packages/<name>
 2. 在新包的 `pubspec.yaml` 中加入 `resolution: workspace`
 3. example 包名建议用 `<name>_example`，避免与其它 example 冲突
 4. 在仓库根目录执行 `dart pub get`
+
+## AI / Cursor（官方 Flutter skills + Dart MCP）
+
+本仓库已接入官方 Flutter / Dart agent 能力（见 [Get started with AI](https://docs.flutter.dev/ai/get-started)）：
+
+- **Skills**：`.agents/skills/`（25 个，含 Flutter + Dart），并通过符号链接挂到 `.cursor/skills/`
+- **Rules**：`.cursor/rules/flutter-dart-mcp.mdc`（always）、`flutter-hot-reload.mdc`
+- **Dart MCP**：`.cursor/mcp.json`（Flutter / Dart SDK 钉死 `3.41.9`）
+- **IDE**：`.vscode/settings.json` 指向 FVM `3.41.9`；`launch.json` 覆盖全部 package example + `apps/example`
+
+Cursor 侧请安装 Marketplace 插件 **Dart and Flutter**（`/add-plugin dart-flutter`）。Agent 使用 MCP 前应对仓库根执行 `add_roots`：`file:///Users/shang/GitHub/flutter_packages`。

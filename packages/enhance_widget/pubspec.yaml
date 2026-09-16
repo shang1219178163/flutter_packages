@@ -5,8 +5,8 @@ homepage: https://github.com/shang1219178163/flutter_packages/tree/main/packages
 repository: https://github.com/shang1219178163/flutter_packages/tree/main/packages/enhance_widget
 
 environment:
-  sdk: ^3.6.0
-  flutter: ">=1.17.0"
+  sdk: ^3.11.0
+  flutter: ">=3.41.0"
 
 resolution: workspace
 
