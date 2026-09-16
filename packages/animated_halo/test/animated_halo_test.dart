@@ -16,7 +16,12 @@ void main() {
 
     expect(find.byType(AnimatedHalo), findsOneWidget);
     expect(find.byType(ClipOval), findsOneWidget);
-    expect(find.byType(ColoredBox), findsOneWidget);
+    expect(
+      find.byWidgetPredicate(
+        (widget) => widget is ColoredBox && widget.color == Colors.red,
+      ),
+      findsOneWidget,
+    );
   });
 
   testWidgets('AnimatedHalo respects the configured size', (WidgetTester tester) async {
