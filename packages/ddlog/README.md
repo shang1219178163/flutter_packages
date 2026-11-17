@@ -21,15 +21,16 @@ DLog.enableColor = false;    // ANSI colors / 颜色
 
 ```dart
 void onTest() {
+  // DLog.d("AAA");
   try {
     var map = {};
     jsonDecode(map["a"]);
   } catch (e) {
-    debugPrint("$this $e");
-    DLog.d("$e"); // DEBUG
-    DLog.i("$e"); // INFO
-    DLog.w("$e"); // WARN
-    DLog.e("$e"); // ERROR
+    debugPrint("$this $e");//flutter: _MetaDataDemoState#d5486 type 'Null' is not a subtype of type 'String'
+    DLog.d("$e");//flutter: [2025-03-27 10:13:00.725182][DEBUG][ios][_MetaDataDemoState.onTest main.dart:161]: type 'Null' is not a subtype of type 'String'
+    DLog.i("$e");//flutter: [2025-03-27 10:13:00.725901][INFO][ios][_MetaDataDemoState.onTest main.dart:162]: type 'Null' is not a subtype of type 'String'
+    DLog.w("$e");//flutter: [2025-03-27 10:13:00.726502][WARN][ios][_MetaDataDemoState.onTest main.dart:163]: type 'Null' is not a subtype of type 'String'
+    DLog.e("$e");//flutter: [2025-03-27 10:13:00.727041][ERROR][ios][_MetaDataDemoState.onTest main.dart:164]: type 'Null' is not a subtype of type 'String'
   }
 }
 ```
@@ -61,5 +62,7 @@ External apps / 外部项目:
 dependencies:
   flutter:
     sdk: flutter
-  ddlog: ^1.0.1
+  ddlog: ^1.1.1
 ```
+
+更新记录见 [CHANGELOG.md](CHANGELOG.md)。

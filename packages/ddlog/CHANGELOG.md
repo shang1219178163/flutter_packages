@@ -1,3 +1,8 @@
+## 1.1.1 - 2026-11-17
+
+* 提升最低运行环境到 Dart 3.11 / Flutter 3.41，跟随 Flutter 3.41.9 验证。
+* 更新 README 中的示例输出与依赖版本。
+
 ## 1.1.0
 
 * Include file name in caller info output (`Class.method file.dart:line`).
