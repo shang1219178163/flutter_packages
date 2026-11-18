@@ -41,7 +41,7 @@ Disable ANSI color (Android Studio console) / 关闭颜色（Android Studio 不�
 DLog.enableColor = false;
 ```
 
-![](https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/example/assets/images/andriodStudio_screenshot.webp)
+![](https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/ddlog/example/assets/images/andriodStudio_screenshot.webp)
 
 Enable color (VS Code) / 打开颜色（VS Code 支持）:
 
@@ -49,7 +49,7 @@ Enable color (VS Code) / 打开颜色（VS Code 支持）:
 DLog.enableColor = true;
 ```
 
-![](https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/example/assets/images/vscode_screenshot.png)
+![](https://raw.githubusercontent.com/shang1219178163/flutter_packages/main/packages/ddlog/example/assets/images/vscode_screenshot.png)
 
 ## Getting Started / 开始使用
 
@@ -62,7 +62,7 @@ External apps / 外部项目:
 dependencies:
   flutter:
     sdk: flutter
-  ddlog: ^1.1.2
+  ddlog: ^1.1.3
 ```
 
 更新记录见 [CHANGELOG.md](CHANGELOG.md)。

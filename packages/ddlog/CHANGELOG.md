@@ -1,3 +1,7 @@
+## 1.1.3 - 2026-11-18
+
+* 修正 README 截图链接为包内实际路径 `packages/ddlog/example/assets/images/`。
+
 ## 1.1.2 - 2026-11-18
 
 * 修正 `homepage` / `repository` 指向的 GitHub 地址，改为 monorepo 中的包路径。
