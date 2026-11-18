@@ -1,3 +1,8 @@
+## 1.1.2 - 2026-11-18
+
+* 修正 `homepage` / `repository` 指向的 GitHub 地址，改为 monorepo 中的包路径。
+* 修正 README 截图链接，改为仓库内实际存在的图片。
+
 ## 1.1.1 - 2026-11-17
 
 * 提升最低运行环境到 Dart 3.11 / Flutter 3.41，跟随 Flutter 3.41.9 验证。
