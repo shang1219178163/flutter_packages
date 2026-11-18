@@ -1,7 +1,8 @@
 name: tap_track
 description: "Tap-event global tracking."
-version: 1.0.0
-homepage: https://github.com/shang1219178163/tap_track
+version: 1.0.1
+homepage: https://github.com/shang1219178163/flutter_packages/tree/main/packages/tap_track
+repository: https://github.com/shang1219178163/flutter_packages/tree/main/packages/tap_track
 
 environment:
   sdk: ^3.11.0
